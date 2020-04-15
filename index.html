@@ -55,8 +55,8 @@ const biisit = {
     var minuutit = Math.floor(seconds/60);
     var loppusekunnit = seconds - minuutit * 60;
     if (loppusekunnit < 10){
-      loppusekunnit = `0${loppusekunnit]`;
-}
+      loppusekunnit = `0${loppusekunnit}`;
+    }
     return `${minuutit}:${loppusekunnit}`;
   }
   
