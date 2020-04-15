@@ -39,13 +39,17 @@ const biisit = {
     return cell;
   }
   
+  function timePrint(seconds) {
+    return "aika: " + seconds;
+  }
+  
   function populateSongs() {
     let settilista = document.querySelector("#settilista");
     biisit.songs.forEach(song => {
       let tr = document.createElement('tr');
       tr.appendChild(td(song.title));
       tr.appendChild(td(song.artist));
-      tr.appendChild(td(song.length));
+      tr.appendChild(td(timePrint(song.length)));
       tr.appendChild(td(song.tags.join(', ')));
       settilista.appendChild(tr);
     });
