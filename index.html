@@ -46,9 +46,6 @@ const biisit = {
   }
   
   function timePrint(seconds) {
-    if (seconds < 60){
-      return seconds;
-    }
     var minuutit = Math.floor(seconds/60);
     var loppusekunnit = seconds - minuutit * 60;
     return `${minuutit}:${loppusekunnit}`;
