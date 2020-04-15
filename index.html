@@ -43,8 +43,8 @@ const biisit = {
     if (seconds) =< 60){
       return seconds;
     }
-    var minuutit = Math.floor(341/60);
-    
+    var minuutit = Math.floor(seconds/60);
+    var loppusekunnit = seconds - minuutit * 60;
     return "aika: " + seconds;
   }
   
