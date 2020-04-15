@@ -45,7 +45,7 @@ const biisit = {
     }
     var minuutit = Math.floor(seconds/60);
     var loppusekunnit = seconds - minuutit * 60;
-    return "aika: " + seconds;
+    return `${minuutit}:${loppusekunnit}`;
   }
   
   function populateSongs() {
