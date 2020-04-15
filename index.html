@@ -32,22 +32,21 @@ const biisit = {
     }
    ]
   };
+  
+  function td(title) {
+    let cell = document.createElement('td');
+    cell.innerText = title;
+    return cell;
+  }
+  
   function populateSongs() {
     let settilista = document.querySelector("#settilista");
     biisit.songs.forEach(song => {
       let tr = document.createElement('tr');
-      let title = document.createElement('td');
-      title.innerText = song.title;
-      tr.appendChild(title);
-      let artist = document.createElement('td');
-      artist.innerText = song.artist;
-      tr.appendChild(artist);
-      let songLength = document.createElement('td');
-      songLength.innerText = song.length;
-      tr.appendChild(songLength);
-      let tags = document.createElement('td');
-      tags.innerText = song.tags.join(', ');
-      tr.appendChild(tags);
+      tr.appendChild(td(song.title));
+      tr.appendChild(td(song.artist));
+      tr.appendChild(td(song.length));
+      tr.appendChild(td(song.tags.join(', ')));
       settilista.appendChild(tr);
     });
   }
