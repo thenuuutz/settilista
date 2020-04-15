@@ -1,0 +1,16 @@
+{
+  "songs": [
+    {
+      "artist": "Deep Purple",
+      "title": "Smoke on the water",
+      "tags": [ "rock", "nostalgia", "loppuilta" ],
+      "length": 341
+    },
+    {
+      "artist": "Elvis",
+      "title": "(Can't help) falling in love with you",
+      "tags": [ "rock", "ballad", "slovarit" ],
+      "length": 275
+    }
+   ]
+  }
