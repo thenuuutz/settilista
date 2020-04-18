@@ -50,6 +50,8 @@ function timePrint(seconds) {
 
 function populateSongs() {
     let settilista = document.querySelector("#settilista");
+    let totaltime = document.querySelector("#totaltime");
+    let sekuntisumma = 0;
     biisit.songs.forEach(song => {
         let tr = document.createElement('tr');
         tr.appendChild(td(song.title));
@@ -57,6 +59,8 @@ function populateSongs() {
         tr.appendChild(td(timePrint(song.length)));
         tr.appendChild(td(song.tags.join(', ')));
         settilista.appendChild(tr);
+        sekuntisumma = song.lenght;
     });
+    totaltime.innerText=sekuntisumma;
 }
 document.onready = populateSongs();
