@@ -61,6 +61,6 @@ function populateSongs() {
         settilista.appendChild(tr);
         sekuntisumma = sekuntisumma+song.length;
     });
-    totaltime.innerText = sekuntisumma;
+    totaltime.innerText = timePrint(sekuntisumma);
 }
 document.onready = populateSongs();
