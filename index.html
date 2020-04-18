@@ -3,191 +3,193 @@
   <title>Settilistan luomistyökalu</title>
   <style>
     body {
-  font-family: verdana, sans-Serif
-  }
+      font-family: verdana, sans-Serif
+    }
     td, th {
       padding: 1em;
     }
   </style>
 </head>
 <body>
-<h1>Settilistan luomistyökalu</h1>
-<table>
-<thead>
-  <tr>
-    <th>Kappaleen nimi</th>
-    <th>Esittäjä</th>
-    <th>Kappaleen pituus</th>
-    <th>Tyylilaji</th>
-  </tr>
-  </thead>
-  <tbody id="settilista">
-  </tbody>
+  <h1>Settilistan luomistyökalu</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Kappaleen nimi</th>
+        <th>Esittäjä</th>
+        <th>Kappaleen pituus</th>
+        <th>Tyylilaji</th>
+      </tr>
+    </thead>
+    <tbody id="settilista">
+    </tbody>
   </table>
-<script>
-const biisit = {
-  "songs": [
-    {
-      "artist": "Wilson Pickett",
-      "title": "In the midnight hour",
-      "tags": [ "soul", "nostalgia" ],
-      "length": 157
-    },
-    {
-      "artist": "Sam & Dave",
-      "title": "Hold on, I'm comin'",
-      "tags": [ "soul", "nostalgia" ],
-      "length": 154
-    },
-    {
-      "artist": "James Brown",
-      "title": "I got you (I feel good)",
-      "tags": [ "soul", "klassikko" ],
-      "length": 166
-    },
-    {
-      "artist": "The Spencer Davis group",
-      "title": "Gimme some lovin'",
-      "tags": [ "soul", "menobiisi", "nostalgia" ],
-      "length": 187
-    }
-    {
-      "artist": "Earth, Wind and Fire",
-      "title": "September",
-      "tags": [ "disco", "funk", "menobiisi"],
-      "length": 215
-    },
-    {
-      "artist": "Otis Redding",
-      "title": "Hard to handle",
-      "tags": [ "soul", "nostalgia" ],
-      "length": 142
-    }
-    {
-      "artist": "Rolling Stones",
-      "title": "Walking the dog",
-      "tags": [ "rock", "nostalgia", ],
-      "length": 189
-    },
-    {
-      "artist": "Little Richard",
-      "title": "Slippin' and Slidin'",
-      "tags": [ "rock", "klassikko", "menobiisi" ],
-      "length": 131
-    }
-    {
-      "artist": "The Beatles",
-      "title": "I saw her standing there",
-      "tags": [ "rock", "klassikko" ],
-      "length": 174
-    }
-    {
-      "artist": "Mark Ronson feat. Bruno Mars",
-      "title": "Uptown Funk",
-      "tags": [ "funk", "pop", "2000-luku" ],
-      "length": 270
-    },
-    {
-      "artist": "Elvis",
-      "title": "Burning Love",
-      "tags": [ "rock", "klassikko", "menobiisi" ],
-      "length": 170
-    }
-    {
-      "artist": "The Trammps",
-      "title": "Disco Inferno",
-      "tags": [ "disco", "nostalgia", "menobiisi" ],
-      "length": 214
-    }
-    {
-      "artist": "Jimi Hendrix",
-      "title": "Little Wing",
-      "tags": [ "rock", "slovari", "klassikko" ],
-      "length": 146
-    },
-    {
-      "artist": "Sam and Dave",
-      "title": "Soul Man",
-      "tags": [ "soul", "nostalgia" ],
-      "length": 159
-    }
-    {
-      "artist": "Johnnie Taylor",
-      "title": "Who's making love",
-      "tags": [ "soul", "nostalgia" ],
-      "length": 211
-    }
-    {
-      "artist": "Popeda",
-      "title": "Kuuma kesä",
-      "tags": [ "Suomi-rock", "klassikko", "menobiisi" ],
-      "length": 186
-    },
-    {
-      "artist": "Big Joe Turner",
-      "title": "Flip, flop and fly",
-      "tags": [ "rock", "nostalgia" ],
-      "length": 205
-    }
-    {
-      "artist": "Huey Lewis & The News",
-      "title": "Hip to be square",
-      "tags": [ "rock", "nostalgia" ],
-      "length": 240
-    }
-    {
-      "artist": "Glenn Frey",
-      "title": "Heat is on",
-      "tags": [ "Rock", "nostalgia", "menobiisi" ],
-      "length": 228
-    },
-    {
-      "artist": "Topi Sorsakoski & Agents",
-      "title": "Salattu suru",
-      "tags": [ "Iskelmä", "nostalgia" ],
-      "length": 190
-    }
-    {
-      "artist": "The Love Boat theme song",
-      "title": "Jack Jones",
-      "tags": [ "disco", "klassikko" ],
-      "length": 180
-    }
-    {
-      "artist": "Knock on wood",
-      "title": "Eddie Floyd",
-      "tags": [ "soul", "nostalgia" ],
-      "length": 156
-    }    
-   ]
-  };
-  
-  function td(title) {
-    let cell = document.createElement('td');
-    cell.innerText = title;
-    return cell;
-  }
-  
-  function timePrint(seconds) {
-    var minuutit = Math.floor(seconds/60);
-    var loppusekunnit = seconds - minuutit * 60;
-    if (loppusekunnit < 10){
-      loppusekunnit = `0${loppusekunnit}`;
-    }
-    return `${minuutit}:${loppusekunnit}`;
-  }
-  
-  function populateSongs() {
-    let settilista = document.querySelector("#settilista");
-    biisit.songs.forEach(song => {
-      let tr = document.createElement('tr');
-      tr.appendChild(td(song.title));
-      tr.appendChild(td(song.artist));
-      tr.appendChild(td(timePrint(song.length)));
-      tr.appendChild(td(song.tags.join(', ')));
-      settilista.appendChild(tr);
-    });
-  }
-  document.onready = populateSongs();
+  <script>
+    const biisit = {
+      "songs": [
+      {
+        "artist": "Wilson Pickett",
+        "title": "In the midnight hour",
+        "tags": [ "soul", "nostalgia" ],
+        "length": 157
+      },
+      {
+        "artist": "Sam & Dave",
+        "title": "Hold on, I'm comin'",
+        "tags": [ "soul", "nostalgia" ],
+        "length": 154
+      },
+      {
+        "artist": "James Brown",
+        "title": "I got you (I feel good)",
+        "tags": [ "soul", "klassikko" ],
+        "length": 166
+      },
+      {
+        "artist": "The Spencer Davis group",
+        "title": "Gimme some lovin'",
+        "tags": [ "soul", "menobiisi", "nostalgia" ],
+        "length": 187
+      }
+      {
+        "artist": "Earth, Wind and Fire",
+        "title": "September",
+        "tags": [ "disco", "funk", "menobiisi"],
+        "length": 215
+      },
+      {
+        "artist": "Otis Redding",
+        "title": "Hard to handle",
+        "tags": [ "soul", "nostalgia" ],
+        "length": 142
+      }
+      {
+        "artist": "Rolling Stones",
+        "title": "Walking the dog",
+        "tags": [ "rock", "nostalgia", ],
+        "length": 189
+      },
+      {
+        "artist": "Little Richard",
+        "title": "Slippin' and Slidin'",
+        "tags": [ "rock", "klassikko", "menobiisi" ],
+        "length": 131
+      }
+      {
+        "artist": "The Beatles",
+        "title": "I saw her standing there",
+        "tags": [ "rock", "klassikko" ],
+        "length": 174
+      }
+      {
+        "artist": "Mark Ronson feat. Bruno Mars",
+        "title": "Uptown Funk",
+        "tags": [ "funk", "pop", "2000-luku" ],
+        "length": 270
+      },
+      {
+        "artist": "Elvis",
+        "title": "Burning Love",
+        "tags": [ "rock", "klassikko", "menobiisi" ],
+        "length": 170
+      }
+      {
+        "artist": "The Trammps",
+        "title": "Disco Inferno",
+        "tags": [ "disco", "nostalgia", "menobiisi" ],
+        "length": 214
+      }
+      {
+        "artist": "Jimi Hendrix",
+        "title": "Little Wing",
+        "tags": [ "rock", "slovari", "klassikko" ],
+        "length": 146
+      },
+      {
+        "artist": "Sam and Dave",
+        "title": "Soul Man",
+        "tags": [ "soul", "nostalgia" ],
+        "length": 159
+      }
+      {
+        "artist": "Johnnie Taylor",
+        "title": "Who's making love",
+        "tags": [ "soul", "nostalgia" ],
+        "length": 211
+      }
+      {
+        "artist": "Popeda",
+        "title": "Kuuma kesä",
+        "tags": [ "Suomi-rock", "klassikko", "menobiisi" ],
+        "length": 186
+      },
+      {
+        "artist": "Big Joe Turner",
+        "title": "Flip, flop and fly",
+        "tags": [ "rock", "nostalgia" ],
+        "length": 205
+      }
+      {
+        "artist": "Huey Lewis & The News",
+        "title": "Hip to be square",
+        "tags": [ "rock", "nostalgia" ],
+        "length": 240
+      }
+      {
+        "artist": "Glenn Frey",
+        "title": "Heat is on",
+        "tags": [ "Rock", "nostalgia", "menobiisi" ],
+        "length": 228
+      },
+      {
+        "artist": "Topi Sorsakoski & Agents",
+        "title": "Salattu suru",
+        "tags": [ "Iskelmä", "nostalgia" ],
+        "length": 190
+      }
+      {
+        "artist": "The Love Boat theme song",
+        "title": "Jack Jones",
+        "tags": [ "disco", "klassikko" ],
+        "length": 180
+      }
+      {
+        "artist": "Knock on wood",
+        "title": "Eddie Floyd",
+        "tags": [ "soul", "nostalgia" ],
+        "length": 156
+      }    
+      ]
+    };
     
- </script>
+    function td(title) {
+      let cell = document.createElement('td');
+      cell.innerText = title;
+      return cell;
+    }
+    
+    function timePrint(seconds) {
+      var minuutit = Math.floor(seconds/60);
+      var loppusekunnit = seconds - minuutit * 60;
+      if (loppusekunnit < 10){
+        loppusekunnit = `0${loppusekunnit}`;
+      }
+      return `${minuutit}:${loppusekunnit}`;
+    }
+    
+    function populateSongs() {
+      let settilista = document.querySelector("#settilista");
+      biisit.songs.forEach(song => {
+        let tr = document.createElement('tr');
+        tr.appendChild(td(song.title));
+        tr.appendChild(td(song.artist));
+        tr.appendChild(td(timePrint(song.length)));
+        tr.appendChild(td(song.tags.join(', ')));
+        settilista.appendChild(tr);
+      });
+    }
+    document.onready = populateSongs();
+    
+  </script>
+  </body>
+</html>
