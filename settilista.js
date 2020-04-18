@@ -48,9 +48,7 @@ function timePrint(seconds) {
         if (loppuminuutit < 10){
             loppuminuutit = `0${loppuminuutit}`;
         }
-        {
         minuutit = `${tunnit}:${loppuminuutit}`;
-        }
     }
     if (loppusekunnit < 10){
         loppusekunnit = `0${loppusekunnit}`;
