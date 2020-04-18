@@ -28,7 +28,7 @@ const biisit = {
             "artist": "Earth, Wind and Fire",
             "title": "September",
             "tags": [ "disco", "funk", "menobiisi"],
-            "length": 215
+            "length": 3600
         } 
     ]
 };
@@ -42,8 +42,16 @@ function td(title) {
 function timePrint(seconds) {
     var minuutit = Math.floor(seconds/60);
     var loppusekunnit = seconds - minuutit * 60;
-    if (loppusekunnit < 10){
-        loppusekunnit = `0${loppusekunnit}`;
+        if (loppusekunnit < 10){
+            loppusekunnit = `0${loppusekunnit}`;
+    if (minuutit >= 60){
+        var tunnit = Math.floor(minuutit/60);
+        var loppuminuutit = minuutit - tunnit * 60;
+        if (loppuminuutit < 10){
+            loppuminuutit = `0${loppuminuutit}`;
+            minuutit = `${tunnit}:${loppuminuutit}`;
+        }
+    }
     }
     return `${minuutit}:${loppusekunnit}`;
 }
