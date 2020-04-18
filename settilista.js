@@ -59,8 +59,8 @@ function populateSongs() {
         tr.appendChild(td(timePrint(song.length)));
         tr.appendChild(td(song.tags.join(', ')));
         settilista.appendChild(tr);
-        sekuntisumma = song.lenght;
+        sekuntisumma = sekuntisumma+song.length;
     });
-    totaltime.innerText=sekuntisumma;
+    totaltime.innerText = sekuntisumma;
 }
 document.onready = populateSongs();
