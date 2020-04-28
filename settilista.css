@@ -3,4 +3,5 @@ body {
 }
 td, th {
     padding: 1em;
+    border: 1px solid black;
 }

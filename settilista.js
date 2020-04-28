@@ -63,6 +63,11 @@ function populateSongs() {
     let sekuntisumma = 0;
     biisit.songs.forEach(song => {
         let tr = document.createElement('tr');
+        let valinta = document.createElement('input');
+        valinta.type = 'checkbox';
+        let valinta_td = document.createElement('td');
+        valinta_td.appendChild(valinta);
+        tr.appendChild(valinta_td);
         tr.appendChild(td(song.title));
         tr.appendChild(td(song.artist));
         tr.appendChild(td(timePrint(song.length)));
