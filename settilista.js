@@ -78,13 +78,12 @@ function populateSongs() {
     totaltime.innerText = timePrint(sekuntisumma);
 }
 function selectAll() {
-    if (this.checked) {
-        alert("valitaankaikki")
-    }
-        else {
-            alert("poistetaanvalinnat");
-    }
-    alert(this.checked);
+    let onko_valittu = this.checked;
+    (this.checked)
+    let ruksit = document.querySelectorAll("input[type=checkbox]");
+    ruksit.forEach(ruksi => {
+        ruksi.checked = onko_valittu;
+    })
 }
 document.onready = populateSongs();
 const select_all = document.querySelector("#check");
