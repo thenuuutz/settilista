@@ -78,7 +78,13 @@ function populateSongs() {
     totaltime.innerText = timePrint(sekuntisumma);
 }
 function selectAll() {
-    alert("valitsekaikki");
+    if (this.checked) {
+        alert("valitaankaikki")
+    }
+        else {
+            alert("poistetaanvalinnat");
+    }
+    alert(this.checked);
 }
 document.onready = populateSongs();
 const select_all = document.querySelector("#check");
