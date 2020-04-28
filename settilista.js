@@ -77,4 +77,9 @@ function populateSongs() {
     });
     totaltime.innerText = timePrint(sekuntisumma);
 }
+function selectAll() {
+    alert("valitsekaikki");
+}
 document.onready = populateSongs();
+const select_all = document.querySelector("#check");
+select_all.onclick = selectAll;
