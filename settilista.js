@@ -79,7 +79,6 @@ function populateSongs() {
 }
 function selectAll() {
     let onko_valittu = this.checked;
-    (this.checked)
     let ruksit = document.querySelectorAll("input[type=checkbox]");
     ruksit.forEach(ruksi => {
         ruksi.checked = onko_valittu;
