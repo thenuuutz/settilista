@@ -1,7 +1,11 @@
 body {
-    font-family: verdana, sans-Serif
+    font-family: verdana, sans-Serif;
+    background-color: #eeccaa;
 }
 td, th {
     padding: 1em;
-    border: 1px solid black;
+    background-color: linen;
+}
+tr :hover {
+    background-color: white; 
 }
