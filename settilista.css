@@ -2,9 +2,13 @@ body {
     font-family: verdana, sans-Serif;
     background-color: #eeccaa;
 }
+table {
+    border-collapse: collapse;
+}
 td, th {
     padding: 1em;
     background-color: linen;
+    border: 1px solid grey;
 }
 tr :hover {
     background-color: white; 
