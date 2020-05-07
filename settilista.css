@@ -2,14 +2,14 @@ body {
     font-family: verdana, sans-Serif;
     background-color: #eeccaa;
 }
-table {
+#kappaleet {
     border-collapse: collapse;
 }
-td, th {
+#kappaleet td, #kappaleet th {
     padding: 1em;
     background-color: linen;
     border: 1px solid grey;
 }
-tr :hover {
+#kappaleet tr, #kappaleet td:hover {
     background-color: white; 
 }
