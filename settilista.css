@@ -10,6 +10,6 @@ body {
     background-color: linen;
     border: 1px solid grey;
 }
-#kappaleet tr, #kappaleet td:hover {
+#kappaleet tr:hover td {
     background-color: white; 
 }
