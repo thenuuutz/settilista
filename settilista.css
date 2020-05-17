@@ -1,14 +1,24 @@
 body {
     font-family: verdana, sans-Serif;
-    background-color: #eeccaa;
+    background-color: #9BFF85;
 }
 #kappaleet {
     border-collapse: collapse;
 }
-#kappaleet td, #kappaleet th {
+#kappaleet th {
     padding: 1em;
-    background-color: linen;
+    background-color: #4E8042;
     border: 1px solid grey;
+}
+#kappaleet td {
+    padding: 1em;
+    border: 1px solid grey;
+}
+#kappaleet tr:nth-child(even) {
+    background-color: #5DFF38;
+}
+#kappaleet tr:nth-child(odd) {
+    background-color: #4ACC2D;
 }
 #kappaleet tr:hover td {
     background-color: white; 

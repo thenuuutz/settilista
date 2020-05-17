@@ -29,7 +29,37 @@ const biisit = {
             "title": "September",
             "tags": [ "disco", "funk", "menobiisi"],
             "length": 3600
-        } 
+        },
+        {
+            "artist": "Otis Redding",
+            "title": "Hard to handle",
+            "tags": [ "soul", "nostalgia" ],
+            "length": 142
+        },
+        {
+            "artist": "Rolling Stones",
+            "title": "Walking the dog",
+            "tags": [ "rock", "nostalgia" ],
+            "length": 189
+        },
+        {
+            "artist": "Little Richard",
+            "title": "Slippin' and Slidin'",
+            "tags": [ "rock", "klassikko", "menobiisi" ],
+            "length": 131
+        },
+        {
+            "artist": "The Beatles",
+            "title": "I saw her standing there",
+            "tags": [ "rock", "klassikko" ],
+            "length": 174
+        },
+        {
+            "artist": "Mark Ronson feat. Bruno Mars",
+            "title": "Uptown Funk",
+            "tags": [ "funk", "pop", "2000-luku" ],
+            "length": 270
+        }
     ]
 };
 
