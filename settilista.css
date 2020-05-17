@@ -2,6 +2,9 @@ body {
     font-family: verdana, sans-Serif;
     background-color: #9BFF85;
 }
+.sticky {
+    position: sticky;
+}
 #kappaleet {
     border-collapse: collapse;
 }
