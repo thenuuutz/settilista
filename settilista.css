@@ -1,13 +1,23 @@
 body {
     font-family: verdana, sans-Serif;
-    background-color: #9BFF85;
+    background-color: #C9EDC0;
+}
+div {
+    border: 1px solid grey;
+    padding: 10px;
+}
+.header {
+    padding: 20;
+    background-color: #C9EDC0;
+    top: 0;
+    position: sticky;
 }
 #kappaleet {
     border-collapse: collapse;
 }
 #kappaleet th {
     padding: 1em;
-    background-color: #4E8042;
+    background-color: #5F8052;
     border: 1px solid grey;
 }
 #kappaleet td {
@@ -15,10 +25,10 @@ body {
     border: 1px solid grey;
 }
 #kappaleet tr:nth-child(even) {
-    background-color: #5DFF38;
+    background-color: #86FF57;
 }
 #kappaleet tr:nth-child(odd) {
-    background-color: #4ACC2D;
+    background-color: #A4FF80;
 }
 #kappaleet tr:hover td {
     background-color: white; 
