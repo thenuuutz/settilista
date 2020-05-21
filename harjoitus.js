@@ -8,8 +8,10 @@ function isoinLuku() {
 }
 
 function pieninLuku() {
+    pienin = Infinity;
+    luvut.forEach(luku => {txt=luku.innerText; numero=parseInt(txt); if(numero < pienin){pienin = numero}});
     let tulos = `Toteuta laskenta ${arguments.callee.name}`;
-    return tulos;
+    return pienin;
 }
 
 function lukujenMaara() {
