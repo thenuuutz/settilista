@@ -26,8 +26,10 @@ function rrSumma() {
 }
 
 function kokoSumma() {
+    let summa = 0;
+    luvut.forEach(luku => {txt=luku.innerText; num=parseInt(txt); summa +=num;})
     let tulos = `Toteuta laskenta ${arguments.callee.name}`;
-    return tulos;
+    return summa;
 }
 
 /*
