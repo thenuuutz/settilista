@@ -1,8 +1,10 @@
 const luvut = document.querySelectorAll('#luvut span');
 
 function isoinLuku() {
+    suurin = -Infinity;
+    luvut.forEach(luku => {txt=luku.innerText; numero=parseInt(txt); if(numero > suurin){suurin = numero}});
     let tulos = `Toteuta laskenta ${arguments.callee.name}`;
-    return tulos;
+    return suurin;
 }
 
 function pieninLuku() {
