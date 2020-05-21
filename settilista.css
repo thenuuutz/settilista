@@ -1,6 +1,8 @@
 body {
     font-family: verdana, sans-Serif;
     background-color: #C9EDC0;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 div {
     border: 1px solid grey;

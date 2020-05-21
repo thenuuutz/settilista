@@ -1,4 +1,4 @@
-const luvut = document.querySelectorAll('jotain tahan');
+const luvut = document.querySelectorAll('#luvut span');
 
 function isoinLuku() {
     let tulos = `Toteuta laskenta ${arguments.callee.name}`;
@@ -11,7 +11,7 @@ function pieninLuku() {
 }
 
 function lukujenMaara() {
-    let tulos = `Toteuta laskenta ${arguments.callee.name}`;
+    let tulos = luvut.length;
     return tulos;
 }
 
@@ -296,7 +296,7 @@ oooo    ooo  888   888   .ooooo.
 const oikeatVastaukset = {
     'isoinLuku': 'NjY1',
     'pieninLuku': 'MA==',
-    'lukujenMAara': 'NjAwMA==',
+    'lukujenMaara': 'NjAwMA==',
     'rmSumma': 'MTc5NjU4Mg==',
     'rrSumma': 'MjA1MzA0',
     'kokoSumma': 'MjAwMTg4Ng=='
