@@ -20,22 +20,27 @@ function lukujenMaara() {
 }
 
 function rmSumma() {
-    let tulos = `Toteuta laskenta ${arguments.callee.name}`;
-    return tulos;
-}
-
-function rrSumma() {
-    let tulos = `Toteuta laskenta ${arguments.callee.name}`;
-    return tulos;
-}
-
-function kokoSumma() {
-    let summa = 0;
-    luvut.forEach(luku => {txt=luku.innerText; num=parseInt(txt); summa +=num;})
-    let tulos = `Toteuta laskenta ${arguments.callee.name}`;
+    let rmluvut = document.querySelectorAll('#luvut span.rm');
+    let summa = lukujenSumma(rmluvut);
     return summa;
 }
 
+function rrSumma() {
+    let rrluvut = document.querySelectorAll('#luvut span.rr');
+    let summa = lukujenSumma(rrluvut);
+    return summa;
+}
+
+function kokoSumma() {
+    let summa = lukujenSumma(luvut);
+    return summa;
+}
+
+function lukujenSumma(numerot) {
+    let summa = 0;
+    numerot.forEach(luku => {txt=luku.innerText; num=parseInt(txt); summa +=num;})
+    return summa;
+}
 /*
 oooo                                  .o8   o8o  
 `888                                 "888   `"'  
